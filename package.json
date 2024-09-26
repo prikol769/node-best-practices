@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "tsc && node dist/index.js",
-    "dev": "nodemon - exec 'ts-node' src/index.ts"
+    "dev": "nodemon - exec 'ts-node' src/index.ts",
+    "lint": "eslint"
   },
   "keywords": [],
   "author": "",
@@ -13,15 +14,18 @@
   "dependencies": {
     "-": "^0.0.1",
     "dotenv": "^16.4.5",
-    "eslint": "^9.11.1",
     "express": "^4.21.0",
     "save-dev": "^0.0.1-security"
   },
   "devDependencies": {
+    "@eslint/js": "^9.11.1",
     "@types/node": "^22.7.2",
+    "eslint": "^9.11.1",
+    "globals": "^15.9.0",
     "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.1",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.7.0"
   }
 }
