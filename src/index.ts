@@ -2,6 +2,8 @@ import express, { Request, Response, Express } from "express";
 
 import dotenv from "dotenv";
 
+import * as middlewares from "./middlewares";
+
 dotenv.config();
 const PORT = process.env.PORT;
 
@@ -16,3 +18,7 @@ app.listen(PORT, () => {
 app.get("/", (req: Request, res: Response) => {
   res.send("Home");
 });
+
+app.use(middlewares.notFound);
+
+app.use(middlewares.errorHandler);
